@@ -1,0 +1,23 @@
+
+
+1. create class and extend it with Application() and Annotate with @HiltAndroidApp
+
+   @HiltAndroidApp
+   MyApplication : Application()
+
+2. In android Manifest add the line in <application
+        android:name=".MyApplication"
+
+3. Create AppModule for injection
+
+     @Module
+     @InstallIn(SingletonComponent::class)
+     object AppModule {
+
+     }
+
+4. Add @AndroidEntryPoint Annotation in MainActivity
+
+   @AndroidEntryPoint
+   class MainActivity : AppCompatActivity() {
+}
