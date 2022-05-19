@@ -1,4 +1,4 @@
-package com.cs.daggerhiltphilip
+package com.cs.daggerhiltphilip.module
 
 import dagger.Module
 import dagger.Provides

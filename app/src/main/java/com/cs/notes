@@ -21,3 +21,17 @@
    @AndroidEntryPoint
    class MainActivity : AppCompatActivity() {
 }
+
+5. to use in viewModel
+
+@HiltViewModel
+class TestViewModel @Inject constructor(
+    @Named(value = "String1") testString1: String
+): ViewModel() {
+    init {
+        Log.d("ViewModel", ": Test String from ViewModel : $testString1")
+    }
+}
+
+6. access it from activity like this
+    private val viewModel : TestViewModel by viewModels()
